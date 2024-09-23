@@ -1,0 +1,100 @@
+LLM
+
+Introduction:
+Architecture
+Encoders and Decoders
+Encoders: Encode the input to vector embeddings(num).
+
+Decoders like GPT generate SINGLE token/output when input is given the model.
+
+Encoder-Decoder : Combination for both preferable for Translation.
+
+
+
+Prompting and Prompt Engineering
+----------------------------------
+Change in Probability Distribution via Prompting and Training 
+
+Prompting:
+In-context learning and k-shot prompting
+Prompting instructions and giving examples
+
+Advance- Chain of thought -> breaking into small
+Least to most -> 
+
+
+
+Decoding
+-----------
+Greedy Decoding-> Sending the correct word again EOS(end of sentence/sequence)
+
+Non Deterministic Decoding-> Selecting any random word from the list until EOS encountered.
+Temperature -> decrease then pd: (probability distribution) of likely word increases whereas
+	    -> increases then pd: (probability distribution) flattens over it.
+
+================================================
+Summarisation Model
+
+Generate succinct version of original text that relays the most important information 
+
+
+Embeddings Model: Converts text into vector embeddings(1024 dimension) vectors
+
+
+Chatbot
+------------
+RAG- paper -> Retrieval Augmented Generation for Knowledge Intensive NLP Tasks
+
+Translation, Chat Modelling
+
+Rag Framework
+----------
+Retriever, Ranker, Generator
+
+
+
+RAG Application workflow
+------------------------------------------------
+
+when a user provides a prompt then model creates an enhanced prompt by combining chat history with input prompt. Enhanced Prompt is then passed to embedding model which create sematic meaningful vector embeddings via Similarity Search. Then application search through relational dbs by matching vector embeddings if match found then valid documents/text/data is augmented to initial prompt results in Augmented prompt. It is then fed into LLM which generate the response. 
+
+Vector Embeddings plot
+------
+
+The sine: (deals with magnitude or distance b/w vectors) and cosine parameter: (Deals with direction b/w vectors)
+
+t-SNE: algo high dimension to 2D
+
+How nearest vector neighbours are obtained ?
+-> K Nearest Neighbour(too slow, more resource)
+-> ANN(large scale similarity search)
+-> Phys form meta , annoy Spotify algorithms
+HNSW
+FNSS
+Papers: Efficient and robust approximate nearest neighbour search using Hierarchical Navigable Small World graphs
+
+vector databases are more faster than traditional dbs because they are made for fast retrieval of embeddings data using similarity search.. 
+
+Billion scale similarity search with GPU's
+
+Dimensionality Reduction
+
+Building Chatbot using OCI 
+ ---------------------------------------------------
+
+GENAI Bootcamp
+-----
+Basic Langchain
+Data in prompt template chain -> LLMI(closed and open source)-> data out -> Output parser
+
+-> parser transforms the LLM output data into the required/desired output format 
+
+
+prompting: 
+zero short prompting: 
+
+
+
+
+
+
